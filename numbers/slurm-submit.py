@@ -10,7 +10,7 @@ import slurm_utils
 
 
 # cookiecutter arguments
-SBATCH_DEFAULTS = """--partition=all --ntasks=1 --nodes=1 --output=logs/slurm/%x.%A_%a.out --error=logs/slurm/%x.%A_%ae.out"""
+SBATCH_DEFAULTS = """--partition=all --ntasks=1 --nodes=1 --output=none --error=none"""
 CLUSTER_CONFIG = ""
 ADVANCED_ARGUMENT_CONVERSION = {"yes": True, "no": False}["no"]
 
