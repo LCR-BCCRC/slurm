@@ -1,0 +1,4 @@
+printshellcmds: true
+use-conda: true
+debug: true
+cores: 1
