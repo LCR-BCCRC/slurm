@@ -10,14 +10,14 @@ import slurm_utils
 
 
 # cookiecutter arguments
-SBATCH_DEFAULTS = """{{cookiecutter.sbatch_defaults}}"""
-CLUSTER_CONFIG = "{{cookiecutter.cluster_config}}"
-ADVANCED_ARGUMENT_CONVERSION = {"yes": True, "no": False}["{{cookiecutter.advanced_argument_conversion}}"]
+SBATCH_DEFAULTS = """--partition=all --ntasks=1 --nodes=1 --output=logs/slurm/%x.%A_%a.out --error=logs/slurm/%x.%A_%ae.out"""
+CLUSTER_CONFIG = ""
+ADVANCED_ARGUMENT_CONVERSION = {"yes": True, "no": False}["no"]
 
 RESOURCE_MAPPING = {
     "time": ("time", "runtime", "walltime"),
     "mem": ("mem", "mem_mb", "ram", "memory"),
-    "mem-per-cpu": ("mem-per-cpu", "mem_per_cpu", "mem_per_thread"),
+        "mem-per-cpu": ("mem-per-cpu", "mem_per_cpu", "mem_per_thread"),
     "nodes": ("nodes", "nnodes")
 }
 
