@@ -1,2 +1,3 @@
 printshellcmds: true
+reason: true
 use-conda: true
